@@ -1,0 +1,44 @@
+
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+    <div class="container-fluid">
+  <a href="{{url_for('index') }}" class="navbar-brand" >Time Tracker</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <form class="form-inline ml-auto">
+
+          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" data-whatever="off">New Task</button>
+          <button type="button" class="btn btn-dark" name="button" onclick="save()">Save</button>
+          <button type="button" class="btn btn-dark" name="button" onclick="report()">Report</button>
+          <button type="button" class="btn btn-dark" name="button" onclick="clearTimer()">Reset All</button>
+          <button type="button" class="btn btn-dark" name="button" onclick="deletetasks()">Delete Taks</button>
+          <button type="button" class="btn btn-dark" name="button" onclick="deleteproject()">Delete Project</button>
+      </form>
+  </div>
+</div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+
+        <form >
+          <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Task Name:</label>
+                      <input    type="text"  onfocus="this.value=''" class="form-control" id="recipient-name">
+                    </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button  id="aGet" type="button" class="btn btn-dark"  data-dismiss="modal" name="button" onclick="addButton(); setname()" >New Task</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</nav>
