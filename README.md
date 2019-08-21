@@ -9,9 +9,6 @@ TimeTracker is the only truly free time tracking software. It's a simple time tr
 
 ####Screenshots
 
-![](https://github.com/AahmetTURGUT/TimeTracking/tree/master/app/static/img/home.png)
-![](https://github.com/AahmetTURGUT/TimeTracking/tree/master/app/static/img/report.png)
-![](https://github.com/AahmetTURGUT/TimeTracking/tree/master/app/static/img/tasks.png)
 
 
 
