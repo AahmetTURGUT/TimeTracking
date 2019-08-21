@@ -13,9 +13,9 @@ pip =>18
 
 ## Screenshots
 
-! [image](https://github.com/AahmetTURGUT/TimeTracking/tree/master/app/static/img/home.png)
-! [image](https://github.com/AahmetTURGUT/TimeTracking/tree/master/app/static/img/report.png)
-! [image](https://github.com/AahmetTURGUT/TimeTracking/tree/master/app/static/img/tasks.png)
+![Alt text](/app/static/img/home.png?raw=true "Optional Title")
+![Alt text](/app/static/img/report.png?raw=true "Optional Title")
+![Alt text](/app/static/img/tasks.png?raw=true "Optional Title")
 
 
 
