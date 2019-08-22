@@ -3,13 +3,16 @@ from flask import redirect,render_template, flash, url_for,request , jsonify,jso
 from flask_sqlalchemy import SQLAlchemy
 from app.models import User
 import sys ,time
-
+db.create_all()
+db.session.commit()
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/', methods=['POST'])
 def post():
+    db.create_all()
+    db.session.commit()	
     text = request.form['text']
     user = User.query.filter_by(username=text).first()
     if user is None:
@@ -19,6 +22,8 @@ def post():
 @app.route('/bar/<name>/')
 def bar(name):
     time.sleep(0.5)
+    db.create_all()
+    db.session.commit()
     datas=User.query.filter_by(username=name).first()
     top=0;
     if datas.taskname:
@@ -36,6 +41,8 @@ def bar(name):
 
 @app.route('/process',methods= ['POST'])
 def process():
+    db.create_all()
+    db.session.commit()
     names = request.form['name']
     times = request.form['time']
     pathname = request.form['pathname']
@@ -56,6 +63,8 @@ def process():
 
 @app.route('/api/<name>/')
 def api_get_data(name):
+    db.create_all()
+    db.session.commit()
     datas=User.query.filter_by(username=name).first()
     if datas is None:
         return jsonify({'error' : 'Missing data!'})
@@ -66,6 +75,8 @@ def api_get_data(name):
 
 @app.route('/delete',methods= ['POST'])
 def delete():
+    db.create_all()
+    db.session.commit()
     pathname = request.form['pathname']
     mylist = pathname.split("/")
     deletename=mylist[2]
@@ -82,6 +93,8 @@ def delete():
 
 @app.route('/projectdelete',methods= ['POST'])
 def projectdelete():
+    db.create_all()
+    db.session.commit()
     pathname = request.form['pathname']
     mylist = pathname.split("/")
     deletename=mylist[2]

@@ -10,7 +10,7 @@ app = Flask(__name__)
 bootstrap=Bootstrap(app)
 app.config.from_object(Config)
 heroku = Heroku(app)
-db= SQLAlchemy(app)
+db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 app.debug = True
 
